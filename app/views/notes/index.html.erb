@@ -1,0 +1,13 @@
+
+
+<h2>Welcome to Notiz</h2>
+
+
+<p> Send a message to the future! </p>
+
+<%= form_tag notes_path do %>
+<%= text_area_tag :recipient_email, nil, :class => "input answerbox", :maxlength =>"40" %>
+<p><%= text_area_tag :body, nil, :class => "input answerbox", :maxlength =>"255" %></p>
+<p><%= text_area_tag :days, nil, :class => "input answerbox"%></p>
+<p><%= submit_tag "Send", :class => "btn" %></p>
+<% end %>
