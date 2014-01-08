@@ -4,7 +4,11 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+gem 'sqlite3', :group => [:development, :test]
+group :production do
+  gem 'thin'
+  gem 'pg'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -46,5 +50,7 @@ end
 
 gem 'devise'
 gem 'rails_12factor', group: :production
-
 gem 'bootstrap-sass'
+gem 'rails_admin'
+gem 'letter_opener', :group => :development
+

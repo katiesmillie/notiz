@@ -1,13 +1,25 @@
 
 
+
+  <div class="container">
+
+   <form class="form-signin" role="form">
+
 <h2>Welcome to Notiz</h2>
 
 
 <p> Send a message to the future! </p>
 
 <%= form_tag notes_path do %>
-<%= text_area_tag :recipient_email, nil, :class => "input" %>
-<p><%= text_area_tag :body, nil, :class => "input", :maxlength =>"255" %></p>
-<p><%= text_area_tag :days, nil, :class => "input" %></p>
-<p><%= submit_tag "Send", :class => "btn" %></p>
+	<%= label_tag("From:") %> 
+	<%= text_area_tag :sender_email, nil, :class => "form-control" %>
+	<p> <%= label_tag("To:") %>
+	<%= text_area_tag :recipient_email, nil, :class => "form-control" %></p>
+	<p><%= text_area_tag :body, nil, :class => "form-control", :maxlength =>"255", :placeholder => "Write a note to the future"%></p>
+ 	<p><%= label_tag("Deliver in (days):") %> 
+	<%= text_area_tag :days, nil, :class => "form-control" %></p>
+	<p><%= submit_tag "Send", :class => "btn-lg" %></p>
+
 <% end %>
+  </form>
+
