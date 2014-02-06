@@ -54,5 +54,5 @@ gem 'bootstrap-sass'
 gem 'rails_admin'
 gem 'letter_opener', :group => :development
 gem 'pry-rails', :group => [:development, :test]
-gem 'better_errors'
+gem 'better_errors', :group => :development
 

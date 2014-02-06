@@ -6,7 +6,9 @@ def create
 	@note=Note.new(:body => params[:body], :recipient_email => params[:recipient_email], :sender_email => params[:sender_email], :days => params[:days])
 	@note.save
 
-	flash[:success]="Your message was sent!"
+	@days=params[:days]
+
+	flash[:success]="Your message was scheduled to be sent!"
 	redirect_to root_path
 end
 
