@@ -30,6 +30,12 @@
   </head>
 
   <body>
+  <% if flash[:success].present? %>
+    <div class="alert alert-success">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= flash[:success]%>
+    </div>
+  <% end %>
 
  <%= yield %>
 
