@@ -53,4 +53,5 @@ gem 'rails_12factor', group: :production
 gem 'bootstrap-sass'
 gem 'rails_admin'
 gem 'letter_opener', :group => :development
+gem 'pry-rails', :group => [:development, :test]
 
