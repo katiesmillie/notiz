@@ -4,20 +4,19 @@
   <div class="container">
 
 
-<h2>Welcome to Notiz</h2>
 
 
-<p> Send a message to the future! </p>
+<h3> send a message to the future...</h3>
 
 <%= form_tag notes_path do %>
-	<%= label_tag("From:") %> 
+	<%= label_tag("from", "from:") %> 
 	<%= text_area_tag :sender_email, nil, :class => "form-control" %>
-	<p> <%= label_tag("To:") %>
+	<p> <%= label_tag("to:", "to:") %>
 	<%= text_area_tag :recipient_email, nil, :class => "form-control" %></p>
-	<p><%= text_area_tag :body, nil, :class => "form-control", :maxlength =>"255", :placeholder => "Write a note to the future"%></p>
- 	<p><%= label_tag("Deliver in (days):") %> 
+	<p><%= text_area_tag :body, nil, :class => "form-control", :maxlength =>"255", :placeholder => "compose wisely, young grasshopper"%></p>
+ 	<p><%= label_tag("deliver in (days):", "deliver in (days):") %> 
 	<%= text_area_tag :days, nil, :class => "form-control" %></p>
-	<p><%= submit_tag "Send", :class => "btn-lg" %></p>
+	<p><%= submit_tag "send", :class => "btn-lg" %></p>
 
 <% end %>
 
