@@ -6,11 +6,13 @@
 
 <%= form_tag notes_path do %>
 	
-	<p><%= text_area_tag :sender_email, nil, :class => "form-control", :placeholder => "from:" %></p>
-	<p><%= text_area_tag :recipient_email, nil, :class => "form-control", :placeholder => "to:" %></p>
+	<p><%= text_area_tag :sender_email, nil, :class => "form-control", :placeholder => "your email" %></p>
+	<p><%= text_area_tag :recipient_email, nil, :class => "form-control", :placeholder => "recipient email" %></p>
 	<p><%= text_area_tag :body, nil, :class => "form-control messagebox", :maxlength =>"600", :placeholder => "what do you want to say?" %></p>
  	
-	<p><%= text_area_tag :days, nil, :class => "form-control",  :placeholder => "how many days in the future should we send it?" %>
+	<p><%= text_area_tag :days, nil, :class => "form-control",  :placeholder => "days from now to send" %>
+
+
 	<p><%= submit_tag "send message", :class => "btn btn-submit" %></p>
 
 <% end %>
