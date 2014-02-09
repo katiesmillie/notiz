@@ -1,3 +1,31 @@
 // Place all the styles related to the notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.white {
+	color: #FFFFFF;
+}
+
+.box {
+   max-width: 600px;
+}
+
+.messagebox {
+  height: 100px;
+}
+
+.btn-submit {
+	background: #30D16E;
+	color: #FFFFFF;
+}
+
+.btn-submit:hover {
+	background: #26BD60;
+	color: #FFFFFf;
+}
+
+.alert-green {
+	background: #30D16E;
+	color: #FFFFFF;
+}

@@ -1,22 +1,18 @@
 
 
+<div class="container box">
 
-  <div class="container">
-
-
-
-
-<h3> send a message to the future...</h3>
+<h2 class="white"> send a message to the future.</h2>
 
 <%= form_tag notes_path do %>
-	<%= label_tag("from", "from:") %> 
-	<%= text_area_tag :sender_email, nil, :class => "form-control" %>
-	<p> <%= label_tag("to:", "to:") %>
-	<%= text_area_tag :recipient_email, nil, :class => "form-control" %></p>
-	<p><%= text_area_tag :body, nil, :class => "form-control", :maxlength =>"255", :placeholder => "compose wisely, young grasshopper"%></p>
- 	<p><%= label_tag("deliver in (days):", "deliver in (days):") %> 
-	<%= text_area_tag :days, nil, :class => "form-control" %></p>
-	<p><%= submit_tag "send", :class => "btn-lg" %></p>
+	
+	<p><%= text_area_tag :sender_email, nil, :class => "form-control", :placeholder => "from:" %></p>
+	<p><%= text_area_tag :recipient_email, nil, :class => "form-control", :placeholder => "to:" %></p>
+	<p><%= text_area_tag :body, nil, :class => "form-control messagebox", :maxlength =>"600", :placeholder => "what do you want to say?" %></p>
+ 	
+	<p><%= text_area_tag :days, nil, :class => "form-control",  :placeholder => "how many days in the future should we send it?" %>
+	<p><%= submit_tag "send message", :class => "btn btn-submit" %></p>
 
 <% end %>
 
+</div>
