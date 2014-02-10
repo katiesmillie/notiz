@@ -8,7 +8,7 @@ def create
 
 	@days=params[:days]
 
-	flash[:success]="your message has scheduled to be sent!"
+	flash[:success]="your message has been scheduled to be sent!"
 	redirect_to root_path
 end
 
