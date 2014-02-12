@@ -1,6 +1,6 @@
 class Note < ActiveRecord::Base
 	validates_presence_of :body, :recipient_email, :days
-	before_save :calculate_send_date
+	before_create :calculate_send_date
 
 def calculate_send_date
 	self.send_date = DateTime.now + self.days.days

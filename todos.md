@@ -8,11 +8,13 @@
 
 
 ## other to dos
+- set the delivery date on create not save
+
+
 - validate email field
 - add better errors
 - add days drop down selector to form
 - email stylin'
-- set the delivery date on create not save
 
 
 - add sms
