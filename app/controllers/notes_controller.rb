@@ -7,8 +7,9 @@ def create
 	@note.save
 
 	@days=params[:days]
+	@recipient_email = params[:recipient_email]
 
-	flash[:success]="your message has been scheduled!"
+	flash[:success]= "Your message to #{@recipient_email} will be delivered in #{@days}"
 	redirect_to root_path
 end
 
