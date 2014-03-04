@@ -9,7 +9,7 @@ def create
 	@days=params[:days]
 	@recipient_email = params[:recipient_email]
 
-	flash[:success]= "Your message to #{@recipient_email} will be delivered in #{@days}"
+	flash[:success]= "Great Scott! Your message to #{@recipient_email} will arrive #{@days} in the future."
 	redirect_to root_path
 end
 
