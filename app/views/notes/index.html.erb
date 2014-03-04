@@ -7,8 +7,6 @@
 
 <%= form_tag notes_path do %>
 
-<form role="form">
-  <div class="form-group">
 
 
 			<p><%= text_area_tag :body, nil, :class => "form-control messagebox", :rows => 5, :placeholder => "write your message", :maxlength =>"600" %></p>
@@ -16,22 +14,16 @@
 	<div class="padding60"></div>
 
 			<%= text_area_tag :recipient_email, nil, :class => "form-control", :id => "input-email", :placeholder => "recipient email" %></p>
-			<%= text_area_tag :sender_email, nil, :class => "form-control", :id => "input-email", :placeholder => "your email" %></p>
- 	</div>
-</form>
+			<%= text_area_tag :sender_email, nil, :class => "form-control", :id => "input-email", :placeholder => "your email" %>
 
 
 
-<form class="form-inline" role="form">
-	<div class="form-group">
 		<div class = "white"> set the flux capacitor for <%= text_area_tag :days, nil, :class => "form-control", :id => "input-days", :placeholder => "" %> days </div>
-	</div>
-	
-	<div class="form-group pull-right">
-		<%= submit_tag "send message", :class => "btn btn-submit"%>
-	</div>
 
-</form>
+	
+		<%= submit_tag "send message", :class => "btn btn-submit"%>
+	
+
 
 <% end %>
 
