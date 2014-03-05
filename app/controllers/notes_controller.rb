@@ -27,9 +27,6 @@ def create
 	@days=params[:days]
 	@recipient_email = params[:recipient_email]
 
-		n = @note
-	NotesMailer.notes_email(n.recipient_email, n.sender_email, n.body, n.days, n.reply_id).deliver
-
 	flash[:success]= "Great Scott! Your message to #{@recipient_email} will arrive #{@days} days in the future."
 
 	# check if reply id is present
