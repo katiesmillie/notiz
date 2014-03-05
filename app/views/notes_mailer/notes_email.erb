@@ -4,9 +4,4 @@
 
 <p>It was sent from the past <%= "#{@days}" %> days ago.<p>
 
-<p>Here it is:<p>
-
-<p><%= "#{@message}" %></p>
-
-<p> <a href="http://notiz.herokuapp.com"> Send your own note  </a> </p>
-
+<p>You can <%= link_to "read your message here.", notes_url(reply_id: @reply_id) %></p>

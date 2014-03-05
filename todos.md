@@ -3,8 +3,22 @@
 PICK A BETTER NAME!!!!
 
 
+user story: can't read your note until you send a note
 
--can't read your note until you send a note
+As a recipeint of a note
+When I visit /notes/unique_id
+Then I must send a note to read my note
+
+As a recipient of a note
+When I send a note at /notes/unique_id
+Then I see my note at /notes/different_unique_id
+
+
+reply_id string
+view_id  string
+
+futureapp.me/notes?reply=reply_id
+futureapp.me/notes?view=view
 
 
 

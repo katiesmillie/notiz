@@ -5,6 +5,8 @@
 
 .white {
 	color: #FFFFFF;
+	font-weight: bold;
+	
 }
 
 .box {
@@ -29,6 +31,7 @@
 .alert-green {
 	background: #30D16E;
 	color: #FFFFFF;
+	text-align: center;
 }
 
 
@@ -37,6 +40,6 @@
 }
 
 #input-days {
-	width: 40px;
+	width: 50px;
 	height: 40px;
 }

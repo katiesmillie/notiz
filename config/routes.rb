@@ -18,6 +18,7 @@ Notiz::Application.routes.draw do
 
   # Example resource route with options:
   resources :notes 
+  resources :note_replies, only: :index
   #     member do
   #       get 'short'
   #       post 'toggle'
