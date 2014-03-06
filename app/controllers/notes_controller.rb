@@ -4,9 +4,9 @@ def index
   @reply_id=params[:reply_id]
 
   #if there is a reply id
-  if @reply_id == params[:reply_id]
+  if  @reply_id == params[:reply_id]
   #then show a flash alert
-	flash[:alert]= "Just send a quick note to the future, then your message will appear"
+	flash[:alert]= "Send a note to the future, and then your note will arrive"
   end
 
 end
