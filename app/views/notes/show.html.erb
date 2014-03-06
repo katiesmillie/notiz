@@ -1,8 +1,12 @@
 
 
-<div class="container box white">
+<div class="container box">
 
-<h2>your note from the past:</h2>
+<h2 class="white">your note from the past :</h2>
 <div class="padding60"></div>
-<h3><%= @note.body %></h3>
-<p><%= @note.recipient_email %> sent this <%= @note.days %> days ago</p>
+
+<div class="well">
+
+<p class="note-text"><%= @note.body %></p>
+</div>
+<p class="pull-right white"> <span class="glyphicon glyphicon-user"> </span> <%= @note.recipient_email %> sent this <%= @note.days %> days ago </p>
