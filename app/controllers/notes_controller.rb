@@ -6,7 +6,7 @@ def index
   #if there is a reply id
   if params[:reply_id].present?
   #then show a flash alert
-	flash[:alert]= "Send a note to the future, and then your note will arrive"
+	flash[:future]= "Send a note to the future, and then your note will arrive"
   end
 
 end
