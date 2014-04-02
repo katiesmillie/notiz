@@ -16,7 +16,7 @@ end
 def self.mail_notes
 	Note.all.each do |n|
 		if n.send_date == Date.today
-			NotesMailer.notes_email(n.recipient_email, n.sender_email, n.body, n.days, n.reply_id).deliver
+			NotesMailer.notes_email(n.recipient_email, n.sender_email, n.body, n.days, n.view_id).deliver
 		else
 		end
 	end

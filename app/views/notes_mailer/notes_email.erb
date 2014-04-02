@@ -4,4 +4,4 @@
 
 <p>It was sent from the past <%= "#{@days}" %> days ago.<p>
 
-<p>You can <%= link_to "read your message here.", notes_url(reply_id: @reply_id) %></p>
+<p>You can <%= link_to "read your message here.", note_url(id: @view_id) %></p>

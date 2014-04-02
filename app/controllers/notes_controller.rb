@@ -6,7 +6,7 @@ def index
   #if there is a reply id
   if params[:reply_id].present?
   #then show a flash alert
-	flash[:future]= "Send a note to the future, and then your note will arrive"
+	flash[:future]= "Send a note to someone else in the future, and then your note will appear below"
   end
 
 end
@@ -28,6 +28,10 @@ def create
 	@recipient_email = params[:recipient_email]
 
 	flash[:success]= "Great Scott! Your message to #{@recipient_email} will arrive #{@days} days in the future."
+
+
+			NotesMailer.notes_email(@recipient_email, @note.sender_email, @note.body, @days, @note.view_id).deliver
+
 
 	# check if reply id is present
 	if params[:reply_id].present?

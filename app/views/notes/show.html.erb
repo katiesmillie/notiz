@@ -3,12 +3,35 @@
 <div class="container box">
 
 <h2 class="white">your note from the past :</h2>
-<div class="padding60"></div>
 
-<div class="well">
+<div class="well note-well">
 
 <p class="note-text"><%= @note.body %></p>
 </div>
-<p class="pull-right white"> <span class="glyphicon glyphicon-user"> </span> <%= @note.recipient_email %> sent this <%= @note.days %> days ago </p>
+<p class="pull-right white"> <span class="glyphicon glyphicon-user"> </span> <%= @note.sender_email %> sent this <%= @note.days %> days ago </p>
 
 
+<div class="padding60"></div>
+<hr>
+
+<h2 class="white"> dear future,</h2>
+
+
+<%= form_tag notes_path do %>
+
+	<p><%= text_area_tag :body, nil, :class => "form-control messagebox", :rows => 5, :placeholder => "write your message", :maxlength =>"600" %></p>
+	
+	<div class="padding60"></div>
+
+	<p><%= text_area_tag :recipient_email, nil, :class => "form-control", :id => "input-email", :placeholder => "recipient email" %></p>
+	<p><%= text_area_tag :sender_email, nil, :class => "form-control", :id => "input-email", :placeholder => "your email" %></p>
+
+	<div class = "white"> 
+	<p>set the flux capacitor for 
+	<%= text_area_tag :days, nil, :class => "form-control", :id => "input-days"%>
+	days 
+	<%= hidden_field_tag :reply_id, @reply_id %></p>
+	
+	<p><%= submit_tag "send message", :class => "btn btn-submit pull-right"%></p>
+	
+<% end %>
