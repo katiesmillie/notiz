@@ -30,9 +30,6 @@ def create
 	flash[:success]= "Great Scott! Your message to #{@recipient_email} will arrive #{@days} days in the future."
 
 
-			NotesMailer.notes_email(@recipient_email, @note.sender_email, @note.body, @days, @note.view_id).deliver
-
-
 	# check if reply id is present
 	if params[:reply_id].present?
 		#Find the note by reply id
