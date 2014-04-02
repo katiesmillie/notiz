@@ -1,38 +1,15 @@
 
 
-PICK A BETTER NAME!!!!
-
-
-user story: can't read your note until you send a note
-
-As a recipeint of a note
-When I visit /notes/unique_id
-Then I must send a note to read my note
-
-As a recipient of a note
-When I send a note at /notes/unique_id
-Then I see my note at /notes/different_unique_id
-
-
-reply_id string
-view_id  string
-
-futureapp.me/notes?reply=reply_id
-futureapp.me/notes?view=view
-
-
-
 
 #hacknight
 - flash message doesn't dismiss
 - add pingdom so my heroku dynos don't sleep
 - validate email field and numbers field
-- redesign/align form
+
 - add surprise me "days" checkbox (5-30 days)
 
 
 #questions:
-- do i need to add labels to my forms: http://getbootstrap.com/css/
 
 
 #open question
@@ -60,3 +37,24 @@ X- switch to and from fields
 x- add @recipient email to flash alert (confirmation) "we scheduled your note for katie@katie.com for  feb 28, 2014."
 x- change from email address to hello@dearfuture.me
 x- set the delivery date on create not save
+
+
+user story: can't read your note until you send a note
+
+As a recipeint of a note
+When I visit /notes/unique_id
+Then I must send a note to read my note
+
+As a recipient of a note
+When I send a note at /notes/unique_id
+Then I see my note at /notes/different_unique_id
+
+
+reply_id string
+view_id  string
+
+futureapp.me/notes?reply=reply_id
+futureapp.me/notes?view=view
+x-PICK A BETTER NAME!!!!
+x- do i need to add labels to my forms: http://getbootstrap.com/css/
+

@@ -5,6 +5,11 @@
 
 .white {
 	color: #FFFFFF;
+
+	textarea {
+      display: inline;
+      resize: none;
+	}
 }
 
 .box {
@@ -38,8 +43,8 @@
 }
 
 #input-days {
-	width: 50px;
-	height: 40px;
+	width: 60px;
+	height: 30px;
 }
 
 .note-text {
