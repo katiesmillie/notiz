@@ -21,18 +21,20 @@ end
 
 def create
     # always create the note
-    if params[:surprise_me] == 1
-		@days= Random.rand(30)
-	else
-		@days=params[:days]
-	end
 
-    @note=Note.new(:body => params[:body], :recipient_email => params[:recipient_email], :sender_email => params[:sender_email], :days => @days)
+    @note=Note.new(:body => params[:body], :recipient_email => params[:recipient_email], :sender_email => params[:sender_email],:days => params[:days])
+ 	
+ # 	if params[:surprise_me] == 1
+	# 	@note.days = Random.rand(30)
+	# else
+	# 	@note.days = params[:days]
+	# end
+
 	@note.save
 
 
-
 	@recipient_email = params[:recipient_email]
+	@days = @note.days
 
 	flash[:success]= "Great Scott! Your message to #{@recipient_email} will arrive #{@days} days in the future."
 
