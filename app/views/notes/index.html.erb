@@ -1,10 +1,30 @@
 
 
-
+<div class="container">
 
 <% if @notes.present? %>
 
-<% @notes.each do |n| %>
-	<p><%= n.body %></p>
+<h2 class="white"> my notes </h2>
+
+<table class="table">
+	<thead>
+	<tr>
+		<th>date sent</th>
+		<th>receipient</th>
+		<th>note</th>
+	</tr>
+	</thead>
+	<tbody>
+	<% @notes.each do |n| %>
+	<tr class="table">
+		<td class="gray-text"><%= n.created_at.to_s(:short) %></td>
+  		<td class="gray-text"><%= n.recipient_email %></td>
+ 		<td class="gray-text"><%= n.body %></td>
+	</tr>
+	<% end %>
+	</tbody>
+</table>
+
 <% end %>
-<% end %>
+
+</div>

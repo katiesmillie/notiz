@@ -38,6 +38,20 @@
 }
 
 
+.note-text {
+ 	color: #FFFFFF;
+ 	font-weight: normal;
+}
+
+.note-well {
+	background-color: #061DC9;
+	border: #061DC9;
+}
+
+.gray-text {
+	color:#777777;
+}
+
 #input-email {
 	height: 40px;
 }
@@ -45,14 +59,4 @@
 #input-days {
 	width: 60px;
 	height: 30px;
-}
-
-.note-text {
- color: #FFFFFF;
- font-weight: normal;
-}
-
-.note-well {
-	background-color: #061DC9;
-	border: #061DC9;
 }
