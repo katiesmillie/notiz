@@ -43,6 +43,27 @@
 
   <body>
 
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container" style="width: auto;">
+        
+        <% if current_user %>
+            <%= link_to "logout", destroy_user_session_path, :method => :delete  %> or 
+            <%= link_to "my notes", notes_path %> or
+        <% else %>
+
+            <%= link_to "signup", new_user_registration_path %> or 
+            <%= link_to "login", new_user_session_path %> or
+        <% end %>
+            <%= link_to "home", root_path %>
+            
+     
+      </div>
+    </div><!-- /navbar-inner -->
+  </div><!-- /navbar -->
+
+
+
 
   <% if flash[:success].present? %>
     <div class="alert alert-success alert-green">

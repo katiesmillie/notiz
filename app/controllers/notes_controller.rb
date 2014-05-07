@@ -1,13 +1,24 @@
 class NotesController < ApplicationController
 
-def index
-  @reply_id=params[:reply_id]
+def new
+	 @reply_id=params[:reply_id]
 
   #if there is a reply id
   if params[:reply_id].present?
   #then show a flash alert
 	flash[:future]= "Send a note to someone else in the future, and then your note will appear below"
   end
+
+end
+
+
+def index
+ 
+if current_user
+    @user=current_user
+   	@notes=Note.where(:user_id => @user.id).all
+end
+
 
 end
 
@@ -21,9 +32,12 @@ end
 
 def create
     # always create the note
-
+	@user=current_user
     @note=Note.new(:body => params[:body], :recipient_email => params[:recipient_email], :sender_email => params[:sender_email],:days => params[:days])
  	
+ 	if @user
+ 	@note.user_id = @user.id
+ 	end
  # 	if params[:surprise_me] == 1
 	# 	@note.days = Random.rand(30)
 	# else

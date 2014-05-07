@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140305002824) do
+ActiveRecord::Schema.define(version: 20140507012112) do
 
   create_table "notes", force: true do |t|
     t.datetime "created_at"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140305002824) do
     t.date     "send_date"
     t.string   "view_id"
     t.string   "reply_id"
+    t.integer  "user_id"
   end
 
   create_table "rails_admin_histories", force: true do |t|

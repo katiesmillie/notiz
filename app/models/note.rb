@@ -3,6 +3,9 @@ class Note < ActiveRecord::Base
 	before_create :calculate_send_date
 	before_create :generate_unique_ids
 
+
+	belongs_to :user
+
 def calculate_send_date
 	self.send_date = DateTime.now + self.days.days
 end
