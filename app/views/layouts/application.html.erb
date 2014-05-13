@@ -39,28 +39,35 @@
 
 </script>
 
-  </head>
+</head>
 
-  <body>
+<body>
+  
+<nav class="navbar" role="navigation">
+  <div class="container-fluid">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
 
-  <div class="navbar">
-    <div class="navbar-inner">
-      <div class="container" style="width: auto;">
-        
-        <% if current_user %>
-            <%= link_to "logout", destroy_user_session_path, :method => :delete  %> or 
-            <%= link_to "my notes", notes_path %> or
-        <% else %>
-
-            <%= link_to "signup", new_user_registration_path %> or 
-            <%= link_to "login", new_user_session_path %> or
-        <% end %>
-            <%= link_to "send a note", root_path %>
-            
+        <li><%= link_to "send a note", root_path %></li>
+      <% if current_user %>
+        <li> <%= link_to "my notes", notes_path %></li>
+      <%end%>
+      
+      </ul>
      
-      </div>
-    </div><!-- /navbar-inner -->
-  </div><!-- /navbar -->
+      <ul class="nav navbar-nav navbar-right">
+      
+     <% if current_user %>
+           <li> <%= link_to "logout", destroy_user_session_path, :method => :delete  %></li>
+        <% else %>
+            <li><%= link_to "signup", new_user_registration_path %></li>
+        <% end %>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 
 
