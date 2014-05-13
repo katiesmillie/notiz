@@ -26,4 +26,23 @@ def self.mail_notes
 end
 
 
+def self.attach_notes_to_users
+
+	# For each note, find notes without user_id
+	Note.all.each do |note|
+	if !note.user
+		user = User.where(:email => note.sender_email).first
+		note.user = user
+		note.save
+	end
+
+	end
+
+	# find user with the note's sender email
+	# if user exists
+	  # add note to user
+
+end
+
+
 end
