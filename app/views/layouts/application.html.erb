@@ -49,8 +49,10 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 
+    
+    <% if current_user %>
+
         <li><%= link_to "send a note", root_path %></li>
-      <% if current_user %>
         <li> <%= link_to "my notes", notes_path %></li>
       <%end%>
       
@@ -61,7 +63,7 @@
      <% if current_user %>
            <li> <%= link_to "logout", destroy_user_session_path, :method => :delete  %></li>
         <% else %>
-            <li><%= link_to "signup", new_user_registration_path %></li>
+          
         <% end %>
 
       </ul>
