@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
 
 def new
+	@note = Note.new
 	 @reply_id=params[:reply_id]
 
   #if there is a reply id
@@ -45,8 +46,7 @@ def create
 		@note.days = params[:days]
  	end
 
-	@note.save!
-
+	if @note.save
 
 	@recipient_email = params[:recipient_email]
 	@days = @note.days
@@ -65,6 +65,9 @@ def create
 	  # redirect to index, show a flash message
 	  redirect_to root_path
     end
+  else
+  	render :new
+  end
 end
 
    
