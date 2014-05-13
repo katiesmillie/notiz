@@ -33,18 +33,19 @@ end
 def create
     # always create the note
 	@user=current_user
-    @note=Note.new(:body => params[:body], :recipient_email => params[:recipient_email], :sender_email => params[:sender_email],:days => params[:days])
+    @note=Note.new(:body => params[:body], :recipient_email => params[:recipient_email], :sender_email => params[:sender_email])
  	
  	if @user
  	@note.user_id = @user.id
  	end
- # 	if params[:surprise_me] == 1
-	# 	@note.days = Random.rand(30)
-	# else
-	# 	@note.days = params[:days]
-	# end
+ 	
+ 	if params[:surprise_me].present?
+		@note.days = Random.rand(30)
+	else
+		@note.days = params[:days]
+ 	end
 
-	@note.save
+	@note.save!
 
 
 	@recipient_email = params[:recipient_email]
