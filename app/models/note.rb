@@ -1,6 +1,6 @@
 class Note < ActiveRecord::Base
 	validates_presence_of :body, :recipient_email, :days
-	validate :email_does_not_belong_to_user
+	# validate :email_does_not_belong_to_user
 	before_create :calculate_send_date
 	before_create :generate_unique_ids
 
@@ -39,10 +39,10 @@ def self.attach_notes_to_users
 	end
 end
 
-def email_does_not_belong_to_user
-	if User.where(:email => sender_email)
-	  self.errors[:sender_email] = "Sender email already exists"
-	end
-end
+# def email_does_not_belong_to_user
+# 	if User.where(:email => sender_email)
+# 	  self.errors[:sender_email] = "Sender email already exists"
+# 	end
+# end
 
 end
