@@ -34,7 +34,14 @@ end
 def create
     # always create the note
 	@user=current_user
-    @note=Note.new(:body => params[:body], :recipient_email => params[:recipient_email], :sender_email => params[:sender_email])
+
+ 	if @user
+ 		@email = @user.email
+ 	else
+		@email = params[:sender_email]
+	end
+
+    @note=Note.new(:body => params[:body], :recipient_email => params[:recipient_email], :sender_email => @email) 
  	
  	if @user
  	@note.user_id = @user.id
@@ -45,6 +52,7 @@ def create
 	else
 		@note.days = params[:days]
  	end
+
 
 	if @note.save
 

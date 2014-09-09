@@ -5,7 +5,13 @@
 	<div class="padding60"></div>
 
 	<p><%= text_area_tag :recipient_email, @note.recipient_email, :class => "form-control", :id => "input-email", :placeholder => "recipient email" %></p>
+	
+	
+	<% if current_user %>
+	<% else %>
 	<p><%= text_area_tag :sender_email, @note.sender_email, :class => "form-control", :id => "input-email", :placeholder => "your email" %></p>
+	<% end %>
+
 	<p> <% if @note.errors.messages[:sender_email].present? %>
 	  <%= @note.errors.messages[:sender_email].first %>
 	  <% end %></p>
