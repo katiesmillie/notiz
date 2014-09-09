@@ -61,7 +61,7 @@
       <ul class="nav navbar-nav navbar-right">
       
      <% if current_user %>
-           <li> <%= link_to "logout", destroy_user_session_path, :method => :delete  %></li>
+           <li> <%= button_to "logout", destroy_user_session_path, :method => :delete  %></li>
         <% else %>
           
         <% end %>
