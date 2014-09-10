@@ -2,15 +2,16 @@
 
 #hacknight
 
-- devise user accounts for notes#index to see limited history
-- views for devise
+- devise user accounts for notes#index to see limited history - make better
+- style views for devise
 - if logged in user, store previous email addresses used
+X if logged in user, don't make me typ emy own email
 
 
 
 - add pingdom so my heroku dynos don't sleep
 - validate email field and numbers field
-- prepopluate reply field with recipient email when viewing a note
+X prepopluate reply field with recipient email when viewing a note
 
 
 #open question

@@ -1,25 +1,24 @@
 <%= form_tag notes_path do %>
 
-	<p><%= text_area_tag :body, @note.body, :class => "form-control messagebox", :rows => 5, :placeholder => "write your message"%></p>
+	<p><%= text_area_tag :body, note.body, :class => "form-control messagebox", :rows => 5, :placeholder => "write your message"%></p>
 	
 	<div class="padding60"></div>
 
-	<p><%= text_area_tag :recipient_email, @note.recipient_email, :class => "form-control", :id => "input-email", :placeholder => "recipient email" %></p>
+	<p><%= text_area_tag :recipient_email, note.recipient_email, :class => "form-control", :id => "input-email", :placeholder => "recipient email" %></p>
 	
 	
-	<% if current_user %>
-	<% else %>
-	<p><%= text_area_tag :sender_email, @note.sender_email, :class => "form-control", :id => "input-email", :placeholder => "your email" %></p>
+	<% unless current_user %>
+	<p><%= text_area_tag :sender_email, note.sender_email, :class => "form-control", :id => "input-email", :placeholder => "your email" %></p>
 	<% end %>
 
-	<p> <% if @note.errors.messages[:sender_email].present? %>
-	  <%= @note.errors.messages[:sender_email].first %>
+	<p> <% if note.errors.messages[:sender_email].present? %>
+	  <%= note.errors.messages[:sender_email].first %>
 	  <% end %></p>
 
 	
 	<div class = "white"> 
 		Deliver my note in
-		<%= text_area_tag :days, @note.days, :class => "form-control", :id => "input-days"%>
+		<%= text_area_tag :days, note.days, :class => "form-control", :id => "input-days"%>
 		days 
 	
 

@@ -28,6 +28,7 @@ def show
 	@note=Note.find_by(:view_id => params[:id])
 	# display the note
 
+	@new_note=Note.new(recipient_email: @note.sender_email)
 
 end
 
