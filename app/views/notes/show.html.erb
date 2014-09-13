@@ -1,19 +1,18 @@
 
 
-<div class="container box">
+<div class="container">
 
-<h2 class="white">your note from the past :</h2>
+<h2>your note from the past:</h2>
 
-<div class="well note-well">
-
-<p class="note-text"><%= @note.body %></p>
+<div class="well">
+	<p><%= @note.body %></p>
 </div>
-<p class="pull-right white"> <span class="glyphicon glyphicon-user"> </span> <%= @note.sender_email %> sent this <%= @note.days %> days ago </p>
 
+<p class="pull-right"> <span class="glyphicon glyphicon-user"> </span> <%= @note.sender_email %> sent this <%= @note.days %> days ago </p>
 
-<div class="padding60"></div>
+<br>
+
 <hr>
 
-<h2 class="white"> dear future,</h2>
-
+<h2>send a reply:</h2>
 <%= render "form", note: @new_note %>

@@ -1,15 +1,14 @@
-<div class="container box">
 
 
  
 <% if current_user %>
 <% else %>
-<p><%= link_to "login", new_user_session_path %> or  <%= link_to "signup", new_user_registration_path %> to see your future... </p>
-<p>and track the notes you've sent.</p>
+<p><%= link_to "login", new_user_session_path %> or  <%= link_to "signup", new_user_registration_path %> to track the notes you've sent.</p>
 <% end %>
-<div class="padding60"></div>
 
-<h1 class="white"> dear future,</h1>
+<div class="jumbotron">
+
+<h1> dear future,</h1>
 
 <%= render "form", note: @note %>
 </div>

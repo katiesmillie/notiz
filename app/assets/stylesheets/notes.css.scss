@@ -3,23 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.white {
-	color: #FFFFFF;
 
-	textarea {
-      display: inline;
-      resize: none;
-	}
-}
 
-.box {
-   max-width: 600px;
-   padding-top: 80px
-}
-
-.messagebox {
-  height: 100px;
-}
 
 .btn-submit {
 	background: #30D16E;
@@ -35,26 +20,8 @@
 	background: #30D16E;
 	color: #FFFFFF;
 	text-align: center;
-}
+}	
 
-
-.note-text {
- 	color: #FFFFFF;
- 	font-weight: normal;
-}
-
-.note-well {
-	background-color: #061DC9;
-	border: #061DC9;
-}
-
-.gray-text {
-	color:#777777;
-}
-
-#input-email {
-	height: 40px;
-}
 
 #input-days {
 	width: 60px;

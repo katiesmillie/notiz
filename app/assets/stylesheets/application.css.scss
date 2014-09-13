@@ -12,28 +12,20 @@
  *= require_tree .
  */
 
+
+// Example using 'yeti' bootswatch
+//
+// First import cerulean variables
+@import "bootswatch/yeti/variables";
+
 // Then bootstrap itself
 @import "bootstrap";
 
+// Bootstrap body padding for fixed navbar
+body { padding-bottom: 60px; }
 
-body {
-	background: #89CFF5;
-}
-
-.padding60 {
-	height: 60px;
-}
+// And finally bootswatch style itself
+@import "bootswatch/yeti/bootswatch";
 
 
-.padding20 {
-	height: 20px;
-}
 
-
-body, p, h3, h2, h1, a {
-	font-family: Futura;
-}
-
-.thin {
-	font-weight: 100;
-}
