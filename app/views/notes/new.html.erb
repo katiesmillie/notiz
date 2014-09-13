@@ -3,7 +3,7 @@
  
 <% if current_user %>
 <% else %>
-<p><%= link_to "login", new_user_session_path %> or  <%= link_to "signup", new_user_registration_path %> to track the notes you've sent.</p>
+<p>You don't have to<%= link_to "login", new_user_session_path %> to send a note, but if you want to track the notes you've sent you should <%= link_to "sign up", new_user_registration_path %> ! </p>
 <% end %>
 
 <div class="jumbotron">

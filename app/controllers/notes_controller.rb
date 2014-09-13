@@ -60,7 +60,7 @@ def create
 	@recipient_email = params[:recipient_email]
 	@days = @note.days
 
-	flash[:success]= "Great Scott! Your message to #{@recipient_email} will arrive #{@days} days in the future."
+	flash[:success]= "Your message to #{@recipient_email} will be delivered #{@days} days in the future."
 
 
 	# check if reply id is present
