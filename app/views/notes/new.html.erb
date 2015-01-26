@@ -1,15 +1,15 @@
 
 
- <div id="hero">
-  <div class="container">
- <h1> dear future,</h1>
+<div id="hero">
+<div class="container">
 <div class="note">
+
+<h1> dear future,</h1>
 
 <% if current_user %>
 <% else %>
 <p class="info" align="center"><%= link_to "Sign up", new_user_registration_path %> for a free account to keep track of the notes you've sent!</p>
 <% end %>
-
 
 
 <%= render "form", note: @note %>
