@@ -32,7 +32,7 @@ a, p, label, .btn {
 	font-weight: lighter;	
 }
 
-.note form {
+.note {
 	padding: 60px 100px 400px 100px;
 }
 
@@ -43,7 +43,6 @@ a, p, label, .btn {
 
 .btn {
 	border-radius: 0px;
-	border-bottom: solid darken(#FFC286, 15%);
 	margin: 20px;
 }
 
