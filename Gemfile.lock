@@ -31,14 +31,15 @@ GEM
       json
     arel (4.0.1)
     atomic (1.1.14)
+    autoprefixer-rails (5.0.0.3)
+      execjs
+      json
     bcrypt-ruby (3.1.2)
     better_errors (1.0.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
-    bootstrap-sass (3.0.2.1)
+    bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
-    bootswatch-rails (3.2.4)
-      railties (>= 3.1)
     builder (3.1.4)
     coderay (1.1.0)
     coffee-rails (4.0.1)
@@ -187,9 +188,9 @@ PLATFORMS
 
 DEPENDENCIES
   airbrake
+  autoprefixer-rails
   better_errors
-  bootstrap-sass
-  bootswatch-rails
+  bootstrap-sass (~> 3.2.0)
   coffee-rails (~> 4.0.0)
   devise
   jbuilder (~> 1.2)

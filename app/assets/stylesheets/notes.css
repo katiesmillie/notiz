@@ -1,0 +1,80 @@
+/*// Place all the styles related to the notes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*/
+
+.navbar-default {
+	margin: 0px;
+	border: none;
+	background-image: none;
+	border: none;
+}
+
+h1 {
+	font-family: "Learning Curve Pro", "Times New Roman", Times, serif;
+	font-size: 100px;
+	padding-top: 0px;
+	color: #4F5664
+}
+
+/*.jumbotron {
+background-color:rgba(255,255,255, 0.3);
+padding: 10px;
+}*/
+
+label {
+	margin-top: 8px;
+	margin-bottom: 0px;
+}
+
+a, p, label, .btn {
+	font-family: Avenir;
+	font-weight: lighter;	
+}
+
+.note form {
+	padding: 60px 100px 400px 100px;
+}
+
+.note form label {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	color: #FFFFFF;
+}
+
+.btn {
+	border-radius: 0px;
+	border-bottom: solid darken(#FFC286, 15%);
+	margin: 20px;
+}
+
+textarea {
+	font-family: Avenir;
+}
+
+#hero {
+	height: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(bg.jpg) top center no-repeat;
+	background-size: cover;
+}
+
+/*.footer {
+	bottom: 0;
+	width: 100%;
+	background-color: #4F5664;
+	color: #FFFFFF;
+	padding: 30px;
+	bottom: 0;
+}*/
+
+.info a {
+	color: #4F5664;
+	text-decoration: underline;
+}
+.info {
+	margin-top: 20px;
+	color: #4F5664;
+}
+
+.navbar-default a:hover {
+    color: #FFFFFF;
+}

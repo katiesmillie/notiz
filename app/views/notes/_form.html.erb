@@ -1,39 +1,37 @@
 
 
-  <div class="form-group">
 
-<%= form_tag notes_path do %>
+ <div class="form-group note">
 
-   
-	<%= label_tag("message") %>
+
+
+  <%= form_tag notes_path do %>
+
+ <h1> dear future,</h1>
+ <br>
+
+	<%= label_tag("message")%>
 	<%= text_area_tag :body, note.body, :class => "form-control"%>
 	<%= label_tag("recipient email") %>
 	<%= email_field_tag :recipient_email, note.recipient_email, :class => "form-control" %>
-
 	
-<% unless current_user %>
-	<%= label_tag("your email") %>
-	<%= email_field_tag :sender_email, note.sender_email, :class => "form-control" %>
-<% end %>
+	<% unless current_user %>
+		<%= label_tag("your email") %>
+		<%= email_field_tag :sender_email, note.sender_email, :class => "form-control" %>
+	<% end %>
 
-<% if note.errors.messages[:sender_email].present? %>
-<%= note.errors.messages[:sender_email].first %>
-<% end %>
+	<% if note.errors.messages[:sender_email].present? %>
+		<%= note.errors.messages[:sender_email].first %>
+	<% end %>
 
 	<%= label_tag("days to deliver in") %>
 	<%= number_field_tag :days, note.days, :class => "form-control"%>
-
 	<%= label_tag("or randomize days") %>
 	<%= check_box_tag :surprise_me %> 
 	<%= hidden_field_tag :reply_id, @reply_id %></h5>
+	<%= submit_tag "SEND", :class => "btn btn-success pull-right"%>
+
+  <% end %>
+
 </div>
 
-	<%= submit_tag "send", :class => "btn btn-success pull-right"%>
-
-
-<br>
-
-
-	
-<% end %>
-</div>

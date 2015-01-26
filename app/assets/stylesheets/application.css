@@ -13,19 +13,3 @@
  */
 
 
-// Example using 'yeti' bootswatch
-//
-// First import cerulean variables
-@import "bootswatch/yeti/variables";
-
-// Then bootstrap itself
-@import "bootstrap";
-
-// Bootstrap body padding for fixed navbar
-body { padding-bottom: 60px; }
-
-// And finally bootswatch style itself
-@import "bootswatch/yeti/bootswatch";
-
-
-

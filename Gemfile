@@ -50,11 +50,12 @@ end
 
 gem 'devise'
 gem 'rails_12factor', group: :production
-gem 'bootstrap-sass'
 gem 'rails_admin'
 gem 'letter_opener', :group => :development
 gem 'pry-rails', :group => [:development, :test]
 gem 'better_errors', :group => :development
 gem 'airbrake'
-gem 'bootswatch-rails'
+
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 
