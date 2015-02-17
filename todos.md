@@ -1,38 +1,55 @@
 
+#todos
 
-#hacknight
-
-- devise user accounts for notes#index to see limited history - make better
-- style views for devise
-- if logged in user, store previous email addresses used
-X if logged in user, don't make me typ emy own email
-
-
-
-- add pingdom so my heroku dynos don't sleep
-- validate email field and numbers field
-X prepopluate reply field with recipient email when viewing a note
+#notes history
+- better default sort
+- user can sort notes history
+- don't use a table 
+- add "seen" field to notes history (if sendgrid API allows)
 
 
-#open question
+#emails
 - delivered or open receipt when user gets your note (sendgrid)
+- prettier email view
+
+
+#form
+- if logged in user, store previous email addresses used / contact book
+- validate email field and numbers field
+- add days drop down selector to form and random days as one of the selections
+
+
+#misc
+- add pingdom so my heroku dynos don't sleep
+
+
+
+
+
 
 
 ## other to dos
-- create view for note#show
-- add hash for note#show privacy? 
-- new email view
+
+
 - react to someone's note with emoji/ like
-- add better errors
 
 
-#random
-- add days drop down selector to form
-- add sms
-- add images
+
+#future
+- mobile app
+- sms
+- images
 
 
 #DONE
+x- add better errors
+x- create view for note#show
+x- add hash for note#show privacy? 
+x- devise user accounts for notes#index to see limited history - make better
+x- style views for devise
+X if logged in user, don't make me typ emy own email
+X prepopluate reply field with recipient email when viewing a note
+
 x- flash message doesn't dismiss (decided i dont care)
 x- protect /admin
 x-
