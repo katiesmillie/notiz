@@ -55,29 +55,26 @@
 
   <div class="navbar-collapse collapse navbar-responsive-collapse">
     <ul class="nav navbar-nav">
-      <li><a href="/">HOME</a></li>
-    
+      <li><%= link_to "HOME", root_path %></li>
 
-<% if current_user %>
-      <li><a href="notes">MY NOTES</a></li>
-      
+    <% if current_user %>
+      <li><%= link_to "MY NOTES", notes_path %></li>
    </ul>
    
-    <ul class="nav navbar-nav navbar-right">
-        <li> <%= link_to "LOGOUT", destroy_user_session_path %></li>
-     </ul>    
+   <ul class="nav navbar-nav navbar-right">
+      <li> <%= link_to "LOGOUT", destroy_user_session_path %></li>
+   </ul>    
 
-<% else %>
-     
-  </ul>
+    <% else %> 
+    </ul>
+    
     <ul class="nav navbar-nav navbar-right">
-           <li><a href="users/sign_in">LOGIN</a></li>
-      </ul>
-     <% end %>
+      <li><%= link_to "LOGIN", new_user_registration_path %></li>
+    </ul>
+    <% end %>
   </div>
 </div>
      
-
   <% if flash[:success].present? %>
     <div class="alert alert-success alert-green">
       <button type="button" class="close" data-dismiss="alert"></button>
@@ -91,9 +88,6 @@
       <%= flash[:future]%>
     </div>
   <% end %>
-
-
-
 
 
  <%= yield %>
