@@ -9,7 +9,8 @@
 <table class="table">
 	<thead>
 	<tr>
-		<th>date sent</th>
+		<th>date created</th>
+		<th>date delivered</th>
 		<th>receipient</th>
 		<th>note</th>
 	</tr>
@@ -17,7 +18,8 @@
 	<tbody>
 	<% @notes.each do |n| %>
 	<tr class="table">
-		<td class="gray-text"><%= n.created_at.to_s(:short) %></td>
+		<td class="gray-text"><%= n.created_at.strftime("%b %d, %Y") %></td>
+		<td class="gray-text"><%= n.send_date.strftime("%b %d, %Y")%></td>
   		<td class="gray-text"><%= n.recipient_email %></td>
  		<td class="gray-text"><%= n.body %></td>
 	</tr>
