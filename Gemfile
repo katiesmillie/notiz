@@ -53,7 +53,7 @@ gem 'rails_12factor', group: :production
 gem 'rails_admin'
 gem 'letter_opener', :group => :development
 gem 'pry-rails', :group => [:development, :test]
-gem 'better_errors', :group => :development
+gem 'better_errors', :group => [:development, :production]
 gem 'airbrake'
 
 gem 'bootstrap-sass', '~> 3.2.0'
