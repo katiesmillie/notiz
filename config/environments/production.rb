@@ -27,7 +27,8 @@ Notiz::Application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
+  # ** may want to change this later, reference: https://www.reinteractive.net/posts/116-12-tips-for-the-rails-asset-pipeline **
 
   # Generate digests for assets URLs.
   config.assets.digest = true
