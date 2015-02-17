@@ -58,7 +58,7 @@
       <li><%= link_to "HOME", root_path %></li>
 
     <% if current_user %>
-      <li><%= link_to "MY NOTES", notes_path %></li>
+      <li><%= link_to "SENT NOTES", notes_path %></li>
    </ul>
    
    <ul class="nav navbar-nav navbar-right">
@@ -69,28 +69,30 @@
     </ul>
     
     <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "LOGIN", new_user_registration_path %></li>
+      <li><%= link_to "LOGIN", new_user_session_path %></li>
     </ul>
     <% end %>
   </div>
 </div>
      
   <% if flash[:success].present? %>
-    <div class="alert alert-success alert-green">
-      <button type="button" class="close" data-dismiss="alert"></button>
-      <%= flash[:success]%>
+    <div class="alert-delivered">
+<!--       <button type="button" class="close" data-dismiss="alert"></button>
+ -->      <%= flash[:success]%>
     </div>
   <% end %>
 
     <% if flash[:future].present? %>
-    <div class="alert alert-success alert-green">
-      <button type="button" class="close" data-dismiss="alert"></button>
-      <%= flash[:future]%>
+    <div class="alert alert-success">
+<!--       <button type="button" class="close" data-dismiss="alert"></button>
+ -->      <%= flash[:future]%>
     </div>
   <% end %>
 
 
+
  <%= yield %>
+
 
 
 <!-- 

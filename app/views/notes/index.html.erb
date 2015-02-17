@@ -4,10 +4,9 @@
 
 <% if @notes.present? %>
 
-<h2> my sent notes </h2>
-
 <table class="table">
 	<thead>
+	 <h2 class = "white">sent notes</h2>
 	<tr>
 		<th>date created</th>
 		<th>date delivered</th>
@@ -18,10 +17,10 @@
 	<tbody>
 	<% @notes.each do |n| %>
 	<tr class="table">
-		<td class="gray-text"><%= n.created_at.strftime("%b %d, %Y") %></td>
-		<td class="gray-text"><%= n.send_date.strftime("%b %d, %Y")%></td>
-  		<td class="gray-text"><%= n.recipient_email %></td>
- 		<td class="gray-text"><%= n.body %></td>
+		<td><%= n.created_at.strftime("%b %d, %Y") %></td>
+		<td><%= n.send_date.strftime("%b %d, %Y")%></td>
+  		<td><%= n.recipient_email %></td>
+ 		<td ><%= n.body %></td>
 	</tr>
 	<% end %>
 	</tbody>

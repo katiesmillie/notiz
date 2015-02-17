@@ -1,5 +1,5 @@
 
-#todos
+TODOS
 
 #notes history
 - better default sort
@@ -24,18 +24,8 @@
 
 
 
-
-
-
-
-## other to dos
-
-
-- react to someone's note with emoji/ like
-
-
-
 #future
+- react to someone's note with emoji/ like
 - mobile app
 - sms
 - images

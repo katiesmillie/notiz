@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 */
 
+body {
+background: #4F5664; 
+}
+
 .navbar-default {
 	margin: 0px;
 	border: none;
@@ -71,4 +75,21 @@ textarea {
 
 .navbar-default a:hover {
     color: #FFFFFF;
+}
+
+
+.alert-delivered {
+padding: 15px;
+background-color: #ffe797;
+border-color: #ffcc7e;
+color: #4f5664;
+text-align: center;
+}
+
+table {
+	background: #FFFFFF;
+}
+
+.white {
+	color: #FFFFFF;
 }
