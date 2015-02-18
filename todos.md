@@ -4,14 +4,13 @@ TODOS
 #notes history
 - better default sort
 - user can sort notes history
-- don't use a table 
+- make a better table view
 - add "seen" field to notes history (if sendgrid API allows)
 
 
 #emails
 - delivered or open receipt when user gets your note (sendgrid)
 - prettier email view
-
 
 #form
 - if logged in user, store previous email addresses used / contact book
@@ -25,9 +24,7 @@ TODOS
 
 #layout
 - header hover states for links suck
-- collapable menu doesn't work in mobile
 - user can dismiss flash alert
-
 
 
 #future
@@ -38,6 +35,7 @@ TODOS
 
 
 #DONE
+x- collapable menu doesn't work on heroku ()
 x- add better errors
 x- create view for note#show
 x- add hash for note#show privacy? 
