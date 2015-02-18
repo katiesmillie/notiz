@@ -22,3 +22,5 @@ module Notiz
     # config.i18n.default_locale = :de
   end
 end
+
+config.assets.precompile += ['rails_admin/rails_admin.css', 'rails_admin/rails_admin.js']

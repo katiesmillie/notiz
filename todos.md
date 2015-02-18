@@ -21,6 +21,12 @@ TODOS
 
 #misc
 - add pingdom so my heroku dynos don't sleep
+- add favicon
+
+#layout
+- header hover states for links suck
+- collapable menu doesn't work in mobile
+- user can dismiss flash alert
 
 
 
