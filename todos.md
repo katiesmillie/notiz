@@ -46,8 +46,7 @@ X prepopluate reply field with recipient email when viewing a note
 
 x- flash message doesn't dismiss (decided i dont care)
 x- protect /admin
-x-
-As a recipeint of a note
+x-As a recipeint of a note
 When I visit /notes/unique_id
 Then I must send a note to read my note
 
