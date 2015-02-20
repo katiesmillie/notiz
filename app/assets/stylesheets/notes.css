@@ -37,7 +37,7 @@ a, p, label, .btn {
 }
 
 .note {
-	padding: 60px 100px 400px 100px;
+	padding-bottom: 400px;
 }
 
 .note form label {
