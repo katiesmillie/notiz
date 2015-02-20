@@ -94,6 +94,11 @@ table {
 	color: #FFFFFF;
 }
 
+input {
+	color: #4f5664;
+	margin-bottom: 5px;
+}
+
 * {
-	color: #FFFFFF
+	color: #FFFFFF;
 }
