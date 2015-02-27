@@ -3,15 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 */
 
-body {
-background: #4F5664; 
-}
-
-.navbar-default {
-	margin: 0px;
-	border: none;
-	background-image: none;
-	border: none;
+body#home {
+	background: #4F5664; 
 }
 
 h1 {
@@ -21,11 +14,6 @@ h1 {
 	color: #4F5664
 }
 
-/*.jumbotron {
-background-color:rgba(255,255,255, 0.3);
-padding: 10px;
-}*/
-
 label {
 	margin-top: 8px;
 	margin-bottom: 0px;
@@ -34,6 +22,20 @@ label {
 a, p, label, .btn {
 	font-family: Avenir;
 	font-weight: lighter;	
+}
+
+input {
+	color: #4f5664;
+	margin-bottom: 5px;
+}
+
+
+textarea {
+	font-family: Avenir;
+}
+
+table {
+	color: #4F5664;
 }
 
 .note {
@@ -50,19 +52,12 @@ a, p, label, .btn {
 	margin: 20px;
 }
 
-textarea {
-	font-family: Avenir;
+.navbar-default {
+	margin: 0px;
+	border: none;
+	background-image: none;
+	border: none;
 }
-
-
-/*.footer {
-	bottom: 0;
-	width: 100%;
-	background-color: #4F5664;
-	color: #FFFFFF;
-	padding: 30px;
-	bottom: 0;
-}*/
 
 .info a {
 	color: #4F5664;
@@ -77,7 +72,6 @@ textarea {
     color: #FFFFFF;
 }
 
-
 .alert-delivered {
 padding: 15px;
 background-color: #ffe797;
@@ -86,19 +80,9 @@ color: #4f5664;
 text-align: center;
 }
 
-table {
-	background: #FFFFFF;
-}
-
 .white {
 	color: #FFFFFF;
 }
 
-input {
-	color: #4f5664;
-	margin-bottom: 5px;
-}
 
-* {
-	color: #FFFFFF;
-}
+
