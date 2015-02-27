@@ -2,21 +2,25 @@
 TODOS
 
 #notes history
-- better default sort
+** - better default sort
 - user can sort notes history
 - make a better table view
 - add "seen" field to notes history (if sendgrid API allows)
 
 
+#notes show
+- fix gylyphicon
+- move reply form as button, pre-fill on next screen
+
+
 #emails
-- delivered or open receipt when user gets your note (sendgrid)
+*- delivered or open receipt when user gets your note (sendgrid)
 - prettier email view
 
 #form
-- if logged in user, store previous email addresses used / contact book
-- validate email field and numbers field
-- add days drop down selector to form and random days as one of the selections
-
+**- if logged in user, store previous email addresses used / contact book
+- add days drop down selector to form and random days as one of the selections?
+**- change days selector to calendar?
 
 #misc
 - add pingdom so my heroku dynos don't sleep
@@ -26,7 +30,6 @@ TODOS
 - header hover states for links suck
 - user can dismiss flash alert
 
-
 #future
 - react to someone's note with emoji/ like
 - mobile app
@@ -34,7 +37,10 @@ TODOS
 - images
 
 
+
+
 #DONE
+x- validate email field and numbers field
 x- collapable menu doesn't work on heroku ()
 x- add better errors
 x- create view for note#show

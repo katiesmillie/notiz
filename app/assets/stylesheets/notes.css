@@ -30,9 +30,9 @@ input {
 }
 
 
-textarea {
+/*textarea {
 	font-family: Avenir;
-}
+}*/
 
 table {
 	color: #4F5664;
@@ -63,6 +63,7 @@ table {
 	color: #4F5664;
 	text-decoration: underline;
 }
+
 .info {
 	margin-top: 20px;
 	color: #4F5664;
@@ -73,15 +74,11 @@ table {
 }
 
 .alert-delivered {
-padding: 15px;
-background-color: #ffe797;
-border-color: #ffcc7e;
-color: #4f5664;
-text-align: center;
-}
-
-.white {
-	color: #FFFFFF;
+	padding: 15px;
+	background-color: #ffe797;
+	border-color: #ffcc7e;
+	color: #4f5664;
+	text-align: center;
 }
 
 

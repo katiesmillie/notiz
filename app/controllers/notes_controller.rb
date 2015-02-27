@@ -17,7 +17,8 @@ def index
  
 if current_user
     @user=current_user
-   	@notes=Note.where(:user_id => @user.id).all
+   	@notes=Note.order("send_date DESC").where(:user_id => @user.id).all
+
 end
 
 
