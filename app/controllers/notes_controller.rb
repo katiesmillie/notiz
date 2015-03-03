@@ -18,7 +18,6 @@ def index
 if current_user
     @user=current_user
    	@notes=Note.order("send_date DESC").where(:user_id => @user.id).all
-
 end
 
 
@@ -47,12 +46,15 @@ def create
  	if @user
  	@note.user_id = @user.id
  	end
+
+	@delivery_date = params[:delivery_date]
+ 	@note.send_date = Date.strptime(@delivery_date, '%m/%d/%Y')
  	
- 	if params[:surprise_me].present?
-		@note.days = Random.rand(30)
-	else
-		@note.days = params[:days]
- 	end
+ # 	if params[:surprise_me].present?
+	# 	@note.days = Random.rand(30)
+	# else
+		@note.days = (@note.send_date - Date.today).to_i
+ # 	end
 
 
 	if @note.save
@@ -62,22 +64,23 @@ def create
 
 	flash[:success]= "Your message to #{@recipient_email} will be delivered #{@days} days in the future."
 
+	end
 
-	# check if reply id is present
-	if params[:reply_id].present?
-		#Find the note by reply id
-		note=Note.find_by(:reply_id => params[:reply_id])
+# 	# check if reply id is present
+# 		if params[:reply_id].present?
+# 			#Find the note by reply id
+# 			note=Note.find_by(:reply_id => params[:reply_id])
 
-	  # redirect to show
-	  redirect_to note_path(note.view_id)
-    else
-	  # redirect to index, show a flash message
+# 	  		# redirect to show
+# 	 	 redirect_to note_path(note.view_id)
+#     else
+# 	  # redirect to index, show a flash message
 	  redirect_to root_path
-    end
-  else
-  	render :new
-  end
-end
+#     end
+#   else
+#   	render :new
+#   end
 
-   
+
+ end  
 end

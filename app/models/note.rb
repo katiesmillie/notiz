@@ -1,20 +1,26 @@
 class Note < ActiveRecord::Base
-	validates_presence_of :body, :recipient_email, :days
+	validates_presence_of :body, :recipient_email
 	# validate :email_does_not_belong_to_user
-	before_create :calculate_send_date
-	before_create :generate_unique_ids
+	# before_create :calculate_send_date
+	# before_create :delivery_date_to_send_date
+	# before_create :generate_unique_ids
 
 
 	belongs_to :user
 
-def calculate_send_date
-	self.send_date = DateTime.now + self.days.days
-end
+# def calculate_send_date
+# 	self.send_date = DateTime.now + self.days.days
+# end
 
-def generate_unique_ids
-	self.reply_id = Digest::SHA256.hexdigest(body + recipient_email + sender_email + Time.now.to_s)	
-	self.view_id = Digest::SHA256.hexdigest(body + recipient_email + sender_email + days.to_s + Time.now.to_s)
-end
+# def delivery_date_to_send_date
+# 	self.send_date = Date.parse(self.delivery_date)
+# end
+
+
+# def generate_unique_ids
+# 	self.reply_id = Digest::SHA256.hexdigest(body + recipient_email + sender_email + Time.now.to_s)	
+# 	self.view_id = Digest::SHA256.hexdigest(body + recipient_email + sender_email + days.to_s + Time.now.to_s)
+# end
 
 
 def self.mail_notes

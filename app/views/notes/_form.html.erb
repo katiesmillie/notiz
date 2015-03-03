@@ -13,6 +13,7 @@
 
 	<%= label_tag("message")%>
 	<%= text_area_tag :body, note.body, :class => "form-control"%>
+	
 	<%= label_tag("recipient email") %>
 	<%= email_field_tag :recipient_email, note.recipient_email, :class => "form-control" %>
 	
@@ -25,10 +26,14 @@
 		<%= note.errors.messages[:sender_email].first %>
 	<% end %>
 
-	<%= label_tag("days to deliver in") %>
-	<%= number_field_tag :days, note.days, :class => "form-control"%>
+	<%= label_tag("delivery date") %>
+	<input class="form-control" id="delivery_date" name="delivery_date" type="text" data-provide='datepicker'>
+ 
+
 <!-- 	<%= label_tag("or randomize days") %>
 	<%= check_box_tag :surprise_me %>  -->
+
+
 	<%= hidden_field_tag :reply_id, @reply_id %></h5>
 	<%= submit_tag "SEND", :class => "btn btn-success pull-right"%>
 

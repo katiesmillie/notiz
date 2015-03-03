@@ -1,9 +1,8 @@
 
-TODOS
+###TODOS
 
 #notes history
-** - better default sort
-- user can sort notes history
+- user can sort notes history themselves
 - make a better table view
 - add "seen" field to notes history (if sendgrid API allows)
 
@@ -18,7 +17,7 @@ TODOS
 - prettier email view
 
 #form
-**- if logged in user, store previous email addresses used / contact book
+**- if logged in user, store previous email addresses used / contact book (Google connect?)
 - add days drop down selector to form and random days as one of the selections?
 **- change days selector to calendar?
 
@@ -37,9 +36,8 @@ TODOS
 - images
 
 
-
-
 #DONE
+X - better default sort
 x- validate email field and numbers field
 x- collapable menu doesn't work on heroku ()
 x- add better errors
